@@ -8,6 +8,8 @@ const massive = require ('massive')
 
 const app = express()
 
+app.get('/api/casa', )
+
 
 
 massive( process.env.CONNECTION_STRING ).then( dbInstance => {

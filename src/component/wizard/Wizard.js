@@ -10,7 +10,7 @@ export default class Wizard extends React.Component{
             address: '',
             city: '',
             state: '',
-            zipcode: 0
+            zipcode: ''
 
         }
 
@@ -20,7 +20,7 @@ export default class Wizard extends React.Component{
 
     addName(event) {
         this.setState({
-            username: event.target.value
+            name: event
         })
     }
 
@@ -37,11 +37,11 @@ export default class Wizard extends React.Component{
             
             <input
             value ={this.state.name}
-            onChange={this.addName}
+            onChange={ (e) => this.addName(e.target.value)}
             placeholder=" Property Name" />
 
             <input
-            value ={this.state.address}
+            // value ={this.state.address}
             placeholder="Address" />
 
             <input
